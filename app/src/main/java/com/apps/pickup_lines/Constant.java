@@ -1,17 +1,14 @@
-package com.practise.pick_up_lines;
-
-import org.json.JSONObject;
+package com.apps.pickup_lines;
 
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
-import okhttp3.RequestBody;
 import okhttp3.Response;
 
 public class Constant {
-    public static String sendHTTPData(String urlpath, JSONObject json) throws Exception {
+    public static String sendHTTPData(String urlpath) throws Exception {
         String TAG = "dinesh";
         MediaType JSON
                 = MediaType.parse("application/json; charset=utf-8");
@@ -22,10 +19,8 @@ public class Constant {
                 .readTimeout(75, TimeUnit.SECONDS)
                 .build();
 
-        RequestBody body = RequestBody.create(JSON, json.toString());
         Request request = new Request.Builder()
                 .url(urlpath)
-                .post(body)
                 .build();
         Response response = client.newCall(request).execute();
         return response.body().string();

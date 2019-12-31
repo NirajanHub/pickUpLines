@@ -1,18 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout
 
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
 
-    >
+    <androidx.appcompat.widget.Toolbar
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        app:menu="@menu/menu"
+        app:titleTextColor="@color/colorAccent"
+        app:title="Pick Up Lines"
+
+
+        >
+
+        <!--<com.practise.pick_up_lines.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pick Up Lines"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp"
+            />-->
+    </androidx.appcompat.widget.Toolbar>
 
     <androidx.viewpager.widget.ViewPager
+
         android:id="@+id/pager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
 
+        />
 
 
 </LinearLayout>

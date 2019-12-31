@@ -1,4 +1,4 @@
-package com.practise.pick_up_lines;
+package com.apps.pickup_lines;
 
 import android.content.Context;
 

@@ -1,25 +1,26 @@
-package com.practise.pick_up_lines;
+package com.apps.pickup_lines;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.ListFragment;
+import androidx.fragment.app.Fragment;
 
-public class ArrayListFragment extends ListFragment {
+import java.util.ArrayList;
+
+public class ArrayListFragment extends Fragment {
     int mNum;
+    static ArrayList<Model> arrayListHere;
 
-    static ArrayListFragment newInstance(int num) {
+    static ArrayListFragment newInstance(ArrayList arrayList,int mNum) {
         ArrayListFragment f = new ArrayListFragment();
+        arrayListHere=arrayList;
         Bundle args = new Bundle();
-        args.putInt("num", num);
+        args.putInt("num", mNum);
         f.setArguments(args);
         return f;
     }
@@ -36,19 +37,19 @@ public class ArrayListFragment extends ListFragment {
 
         View v=inflater.inflate(R.layout.fragment_pager_list,container,false);
         View tv = v.findViewById(R.id.text);
-        ((TextView)tv).setText("Fragment #" + mNum);
+        ((TextView)tv).setText(arrayListHere.get(mNum).tweet);
         return v;
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        setListAdapter(new ArrayAdapter<String>(getActivity(),R.layout.support_simple_spinner_dropdown_item));
+      //  setListAdapter(new ArrayAdapter<String>(getActivity(),R.layout.support_simple_spinner_dropdown_item));
     }
 
-    @Override
+    /*@Override
     public void onListItemClick(@NonNull ListView l, @NonNull View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
         Log.i("FragmentList", "Item clicked: " + id);
-    }
+    }*/
 }
