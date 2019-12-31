@@ -5,18 +5,26 @@
     android:layout_height="match_parent"
     android:layout_centerInParent="true"
     android:background="@color/colorPrimary"
-    android:orientation="vertical">
+    android:orientation="vertical"
+
+    >
 
     <com.apps.pickup_lines.CustomTextView
+
+        android:layout_weight="1"
         android:id="@+id/text"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:gravity="center"
+        android:layout_margin="20dp"
         android:text="Hello"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@color/colorAccent"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+
+        />
+
 
     <!-- The frame layout is here since we will be showing either
     the empty view or the list view.  -->

@@ -53,7 +53,7 @@ public class Networking extends AsyncTask<Void, Void, String> {
             }
             onResponse.gotResponse(arrayList);
 
-        } catch (JSONException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

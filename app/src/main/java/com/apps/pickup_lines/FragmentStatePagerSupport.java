@@ -11,6 +11,8 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import com.google.android.gms.ads.MobileAds;
+
 import java.util.ArrayList;
 
 
@@ -23,6 +25,7 @@ public class FragmentStatePagerSupport extends FragmentActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_pager);
+        MobileAds.initialize(this, initializationStatus -> {});
         OnResponse onResponse = this::afterResponse;
         new Networking(onResponse).execute();
     }
@@ -39,6 +42,7 @@ public class FragmentStatePagerSupport extends FragmentActivity {
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.menu, menu);
         return true;
+
     }
 
     @Override
