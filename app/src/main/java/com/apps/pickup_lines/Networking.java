@@ -4,14 +4,13 @@ import android.os.AsyncTask;
 import android.util.Log;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
 
 public class Networking extends AsyncTask<Void, Void, String> {
-    String url = "http://pebble-pickup.herokuapp.com/tweets";
-    OnResponse onResponse;
+    private String url = "http://pebble-pickup.herokuapp.com/tweets";
+    private OnResponse onResponse;
 
     Networking(OnResponse onResponse) {
         this.onResponse = onResponse;
@@ -38,7 +37,7 @@ public class Networking extends AsyncTask<Void, Void, String> {
     @Override
     protected void onPostExecute(String response) {
         super.onPostExecute(response);
-        ArrayList<Model> arrayList = new ArrayList();
+        ArrayList arrayList = new ArrayList();
         try {
             JSONArray jsonArray = new JSONArray(response);
             for (int i = 0; i < jsonArray.length(); i++) {
