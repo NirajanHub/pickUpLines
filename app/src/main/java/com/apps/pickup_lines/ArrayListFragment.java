@@ -16,6 +16,7 @@ import androidx.fragment.app.Fragment;
 import java.util.ArrayList;
 
 public class ArrayListFragment extends Fragment implements View.OnClickListener {
+
     private int mNum;
     private static ArrayList<Model> arrayListHere;
 

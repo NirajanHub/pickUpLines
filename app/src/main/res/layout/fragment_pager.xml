@@ -1,54 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout
 
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+
+    >
+<!--  <Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/colorPrimaryDark"
+      app:title="Pick Up Lines"
+      app:titleTextColor="@color/colorAccent"
+
+
+      >
+
+      &lt;!&ndash;<com.practise.pick_up_lines.CustomTextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Pick Up Lines"
+          android:textColor="@color/colorAccent"
+          android:textSize="16sp"
+          />&ndash;&gt;
+  </Toolbar>-->
+
+<com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/adView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_weight="1"
+    ads:adSize="BANNER"
+    ads:adUnitId="ca-app-pub-3940256099942544/6300978111"
 
-  <!--  <Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryDark"
-        app:title="Pick Up Lines"
-        app:titleTextColor="@color/colorAccent"
+    />
 
+<androidx.viewpager.widget.ViewPager
 
-        >
+    android:id="@+id/pager"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="0.24" />
 
-        &lt;!&ndash;<com.practise.pick_up_lines.CustomTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pick Up Lines"
-            android:textColor="@color/colorAccent"
-            android:textSize="16sp"
-            />&ndash;&gt;
-    </Toolbar>-->
-
-    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/adView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-3940256099942544/6300978111" />
-
-    <androidx.viewpager.widget.ViewPager
-
-        android:id="@+id/pager"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.24" />
-
-    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/adView2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-3940256099942544/6300978111" />
+<com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/adView2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    ads:adSize="BANNER"
+    ads:adUnitId="ca-app-pub-3940256099942544/6300978111" />
 
 </LinearLayout>

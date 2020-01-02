@@ -1,6 +1,5 @@
 package com.apps.pickup_lines;
 
-
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentStatePagerAdapter;
@@ -17,6 +16,7 @@ public class MyAdapter extends FragmentStatePagerAdapter {
     }
 
     @Override
+
     public int getCount() {
         return arrayList.size();
     }
@@ -26,5 +26,4 @@ public class MyAdapter extends FragmentStatePagerAdapter {
     public Fragment getItem(int position) {
         return ArrayListFragment.newInstance(arrayList, position);
     }
-
 }
