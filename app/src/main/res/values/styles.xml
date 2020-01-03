@@ -1,12 +1,7 @@
 <resources>
-
-    Base application theme.
-
     <style name="AppTheme">
         <!-- Customize your theme here. -->
         <item name="android:textColorSecondary">@color/colorAccent</item>
-        <item name="android:windowBackground">@drawable/pick_up_logo</item>
-
+        <item name="android:windowBackground">@drawable/baclground</item>
     </style>
-
-    </resources>
+</resources>
