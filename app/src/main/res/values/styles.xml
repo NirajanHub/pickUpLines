@@ -2,6 +2,6 @@
     <style name="AppTheme">
         <!-- Customize your theme here. -->
         <item name="android:textColorSecondary">@color/colorAccent</item>
-        <item name="android:windowBackground">@drawable/baclground</item>
+        <item name="android:windowBackground">@drawable/background</item>
     </style>
 </resources>
