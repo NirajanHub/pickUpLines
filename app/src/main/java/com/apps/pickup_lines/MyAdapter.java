@@ -16,7 +16,6 @@ public class MyAdapter extends FragmentStatePagerAdapter {
     }
 
     @Override
-
     public int getCount() {
         return arrayList.size();
     }
@@ -26,4 +25,5 @@ public class MyAdapter extends FragmentStatePagerAdapter {
     public Fragment getItem(int position) {
         return ArrayListFragment.newInstance(arrayList, position);
     }
+
 }

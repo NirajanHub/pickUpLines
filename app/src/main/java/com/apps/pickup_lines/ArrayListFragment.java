@@ -21,18 +21,22 @@ public class ArrayListFragment extends Fragment implements View.OnClickListener 
     private static ArrayList<Model> arrayListHere;
 
     static ArrayListFragment newInstance(ArrayList arrayList, int mNum) {
+
         ArrayListFragment f = new ArrayListFragment();
         arrayListHere = arrayList;
         Bundle args = new Bundle();
         args.putInt("num", mNum);
         f.setArguments(args);
         return f;
+
     }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         mNum = getArguments() != null ? getArguments().getInt("num") : 1;
+
     }
 
     @Nullable
